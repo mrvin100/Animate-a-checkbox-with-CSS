@@ -1,0 +1,120 @@
+@charset "utf-8";
+/* custom css file made by JeanDoe */
+
+/* import Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* css variables */
+
+:root{
+	--main-clr: #567;
+	--light-bg: #e1d1f1;
+	--light-clr: #7a7b7c;
+	--black: #1a1b1c;
+	--white: #fff;
+	
+	--body-font: 'Poppins','Ubuntu Mono', sans-serif;
+}
+
+/* initialisation */
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	font-weight: normal;
+}
+
+html{
+	font-size: 100%;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	align-items: center;
+	background: var(--light-bg);
+	font-family: var(--body-font);
+}
+
+/* form section start */
+
+form{
+	background: var(--white);
+	padding: 1rem;
+	border-radius: .25rem;
+}
+form p{
+	color: var(--light-clr);
+	margin-top: .5rem;
+}
+.checkbox{
+	cursor: pointer;
+}
+
+.checkbox:hover .checkbox_check{
+	background: #ff4754;
+}
+
+.checkbox_input{
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+
+.checkbox_input:checked + .checkbox_check{
+	background: #ff4754;
+	stroke-dashoffset: 0;
+}
+
+.checkbox_check{
+	border: .2rem solid #ff4754;
+	stroke: #f9f9f9;
+	stroke-dasharray: 25;
+	stroke-dashoffset: 25;
+	stroke-linecap: round;
+	stroke-width: .2rem;
+	border-radius: .2rem;
+	fill: none;
+	transition: background .4s, stroke-dashoffset .6s;
+}
+
+.help{
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
+	width: auto;
+	font-size: 1.2rem;
+	cursor: pointer;
+	color: var(--main-clr);
+}
+.help:hover{
+	color: var(--black);
+}
+.message{
+	background: #567;
+	padding: .5rem 1rem;
+	border-radius: .25rem;
+	display: none;
+	transition: all .4s;
+	color: #e9ffff;
+	position: absolute;
+	bottom: 4rem;
+}
+
+.show-message{
+	display: block;
+}
+
+
+
+
+
+
+
+
+
+
